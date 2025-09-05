@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Host App",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/host-app/target/debug/host-app",
+            "args": [],
+            "cwd": "${workspaceFolder}/host-app",
+            "env": {
+                "WASMTIME_BACKTRACE_DETAILS": "1",
+                "WASMTIME_LOG": "debug"
+            },
+            "stopOnEntry": true,
+        }
+    ]
+}

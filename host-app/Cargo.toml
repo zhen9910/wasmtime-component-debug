@@ -1,0 +1,10 @@
+[package]
+name = "host-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasmtime = { version = "36", features = ["component-model", "cranelift", "debug-builtins",
+	"runtime",] }
+anyhow = "1"
+env_logger = "0.11"

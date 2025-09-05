@@ -1,0 +1,9 @@
+package component:foo;
+
+interface math {
+  foo: func(x: s32) -> s32;
+}
+
+world foo-world {
+  export math;
+}
