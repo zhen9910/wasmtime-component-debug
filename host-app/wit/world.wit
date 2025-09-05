@@ -1,7 +1,14 @@
 package component:foo;
 
 interface math {
+  // Key-value pair record
+  record key-value {
+    key: string,
+    value: string,
+  }
+
   foo: func(x: s32) -> s32;
+  bar: func(keys: list<string>) -> list<key-value>;
 }
 
 world foo-world {

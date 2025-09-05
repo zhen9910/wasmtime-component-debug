@@ -50,5 +50,16 @@ fn main() -> anyhow::Result<()> {
     
     println!("✅ foo({}) = {}", input, result);
     
+    // Test the new bar() function
+    let keys = vec!["username".to_string(), "config".to_string(), "session".to_string()];
+    println!("📞 Calling bar({:?})...", keys);
+    
+    let key_values = bindings.component_foo_math().call_bar(&mut store, &keys)?;
+    
+    println!("✅ bar() returned {} key-value pairs:", key_values.len());
+    for kv in key_values {
+        println!("  📋 {} -> {}", kv.key, kv.value);
+    }
+    
     Ok(())
 }
