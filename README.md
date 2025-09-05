@@ -45,8 +45,9 @@ The `foo` function takes an `s32` parameter and returns `x + 1`.
 ### WebAssembly Component
 
 ```bash
+rustup target add wasm32-wasip2
 cd wasm-component
-cargo component build --target wasm32-unknown-unknown
+cargo build --target wasm32-wasip2
 ```
 
 ### Host Application
@@ -104,8 +105,7 @@ A launch configuration is provided in `.vscode/launch.json` for debugging the ho
 
 ## Prerequisites
 
-- Rust toolchain with wasm32-unknown-unknown target
-- `cargo-component` tool: `cargo install cargo-component`
+- Rust toolchain with wasm32-wasip2 target: `rustup target add wasm32-wasip2`
 - LLDB debugger for VS Code debugging
 - VS Code with the C/C++ or CodeLLDB extension
 

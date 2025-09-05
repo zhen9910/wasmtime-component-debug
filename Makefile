@@ -3,7 +3,8 @@
 all: build-component build-host
 
 build-component:
-	cd wasm-component && cargo component build --target wasm32-unknown-unknown
+	rustup target add wasm32-wasip2
+	cd wasm-component && cargo build --target wasm32-wasip2
 
 build-host:
 	cd host-app && cargo build
